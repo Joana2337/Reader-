@@ -1,7 +1,6 @@
 //
 //  ContentView.swift
 //  Reader
-//
 //  Created by Joanne on 3/3/25.
 //
 
@@ -62,5 +61,7 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        //.modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: Item.self, inMemory: false) //store data locally without Cloudkit sycning
+
 }
