@@ -1,0 +1,8 @@
+# Xcode
+## User settings
+xcuserdata/
+
+## API Keys
+APIKeys.swift
+
+
