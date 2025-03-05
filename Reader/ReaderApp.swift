@@ -1,7 +1,6 @@
 //
 //  ReaderApp.swift
 //  Reader
-//
 //  Created by Joanne on 3/3/25.
 //
 
@@ -11,11 +10,9 @@ import SwiftData
 @main
 struct ReaderApp: App {
     var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
+        let schema = Schema([Item.self])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
+        
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])
         } catch {
@@ -26,7 +23,7 @@ struct ReaderApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .modelContainer(sharedModelContainer)
         }
-        .modelContainer(sharedModelContainer)
     }
 }

@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Reader
 //  Created by Joanne on 3/3/25.
-//
+
 
 import SwiftUI
 import SwiftData
@@ -62,6 +62,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
         //.modelContainer(for: Item.self, inMemory: true)
-        .modelContainer(for: Item.self, inMemory: false) //store data locally without Cloudkit sycning
-
+        .modelContainer(for: Item.self, inMemory: false) //store data locally without Cloudkit sycning.
 }
