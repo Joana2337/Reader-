@@ -30,8 +30,8 @@ struct ImageLinks: Codable {
 }
 
 
-
 //where API calls and saving to CloudKit happens but integrating cloudkit to save books data crushes the app.
+
 class GoogleBooksService {
     func searchBooks(query: String, completion: @escaping ([Book]) -> Void) {
         guard let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=\(query.urlEncoded)&key=\(APIKeys.googleBooksAPI)") else {
